@@ -8,10 +8,13 @@
     <style>
         .list{border:1px solid #777; width:50%; margin: 0 auto; overflow: hidden;}
         .left, .right{float: left; width:50%; box-sizing: border-box;}
+        .title{padding-bottom: 50px;}
         .right{border:1px solid #777;}
         .control{overflow: hidden;}
         .p-left{float: left;}
         .p-right{float: right;}
+        .control button{width: 50%}
+        
     </style>
 </head>
 <body>
@@ -19,7 +22,7 @@
         <div class="list">
             <div class="left">사진</div>
             <div class="right">
-                <div>
+                <div class="title">
                     <div>제목:</div>
                     <div>내용:</div>
                 </div>
@@ -29,7 +32,10 @@
                         <div class="p-right">10000원</div>
                     </div>
 
-                    <div>버튼박스</div>
+                    <div class="control">
+                        <button class="p-left">장바구니</button>
+                        <button class="p-right">구매하기</button>
+                    </div>
                 </div>
             </div>
         </div>

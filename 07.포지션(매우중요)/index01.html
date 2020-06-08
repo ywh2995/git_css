@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {/* 전체선택자로 모든 기본요소가 가지고 있는 패딩 마진 없앰 */
+            margin : 0; padding: 0;
+        } 
+
+        .list{
+            width:50%; margin: 0 auto; 
+            border: 1px solid #777;
+        }
+        .content{ /* 부모에 포지션 relative */
+            position: relative;
+        }
+        p{
+            border: 1px solid #777; 
+            height: 100px;
+        }
+        .inner1{
+            background-color: aqua;
+        }
+        .inner2{
+            background-color: blueviolet; 
+            position:absolute; /* z축으로 떠오름 */
+            left: 20px; /* left, right 속성 중에 하나, top,bottom 속성 중에 하나 위치조정 반드시 해줘야 함(값을 넣지 않더라도 0 값 입력해야함) */
+            top: 20px;
+            width: 50px;
+            height: 50px;
+        }
+        .inner3{
+            background-color: forestgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <div class="content">
+            <p class="inner1">포지션</p>
+            <p class="inner2">포지션</p>
+            <p class="inner3">포지션</p>
+        </div>
+    </div>
+</body>
+</html>

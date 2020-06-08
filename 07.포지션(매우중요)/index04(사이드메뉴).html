@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {padding: 0; margin: 0;}
+        ul, li{list-style: none;}
+        header{position: fixed; top:0px; left:0px; width: 100%; z-index: 10;} /* position의 우선순위 z-index */
+        .logo{
+            text-align: center;
+            background-color: white;
+        }
+        .menu-list{background-color: black; text-align: center;}
+        .menu-list li{display: inline-block; padding: 20px 20px;}
+        .menu-list li a {text-decoration: none; color: white;}
+        .menu-list li:hover{background-color: #333;}
+
+        .side{
+            float: right; 
+            margin-top: 100px;
+            position: fixed; top:100px; right:0px;
+            z-index: 20; /* position의 우선순위 z-index */
+        }
+        .side .side-list{
+            background-color: black;
+            
+        }
+        .side .side-list li{
+            list-style: none;
+            padding: 20px;
+            border-bottom: 1px solid white;
+            text-align: center;
+        }
+        .side .side-list li:hover{
+            background-color: #333;
+        }
+        .side .side-list li a{
+            text-decoration: none; 
+            color: white;
+        }
+
+        /* 본문 */
+        section{
+            background-color: aqua; 
+            height: 1000px; 
+            margin-top: 161px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/bgimg.png">
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 사이드메뉴 -->
+    <aside class="side">
+        <ul class="side-list">
+            <li>
+                <a href="">
+                    <p>까톡</p>
+                    <p>kkk123</p>
+                </a>
+            </li>
+            <li><a href="">전화번호</a></li>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴1</a></li>
+        </ul>
+    </aside>
+    <section>
+        본문내용
+    </section>
+</body>
+</html>
