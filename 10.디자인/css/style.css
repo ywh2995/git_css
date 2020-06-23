@@ -80,3 +80,45 @@
         .form-control{border-radius: 0px;}/* 윤곽 */
         .form-control:focus{border-color: #555;}
 
+        /* ==================마이페이지 영역=================== */
+        .myinfo {margin: 0 auto; float: none;}
+        .tab-style {background-color: #607D8B;}
+        .tab-style > li.active > a,
+        .tab-style > li.active > a:hover,
+        .tab-style > li.active > a:focus {background-color: #56707D; border: none; color: #fff;}
+        .tab-style > li > a {border: none; border-radius: 0px; margin: 0px;}
+
+        .tab-content {margin-top: 30px;}
+        .sel {width: 200px;}
+        .email input,
+        .email select,
+        .email div {width: 150px; display: inline-block;}
+
+        /* ========================페이스북======================= */
+        @media (max-width: 767px) {
+            .aside-menu {display: none;}
+        }
+
+        .aside-inner{margin-top: 10px;}
+        .aside-inner ul li a{text-decoration: none; color: #333333;}
+        
+        .section-inner .text-content textarea{height: 50px; transition: height 0.5s ease-in-out;}
+        .section-inner .text-content textarea:focus{height: 100px;}
+        .section-inner .text-group{overflow: hidden; margin-top: 10px;}
+        .section-inner .text-group .left{float: left;}
+        .section-inner .text-group .right{float: right;}
+
+        .title-inner {padding:20px 0;}
+        .title-inner p {margin: 0;}
+        .title-inner{position: relative;}
+        .title-inner .profile{position:absolute; top:20px; left:0px;}
+        .title-inner .title{padding-left: 50px;}
+
+        .content-inner{padding:10px 0;}
+
+        .like-inner{padding: 10px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 10px;}
+        
+        .link-inner{overflow: hidden; padding: 10px 0; border-bottom: 1px solid #ddd;}
+        .link-inner a{display: block; float: left; width: 33.33%; text-align: center; text-decoration: none; color: #333333;}
+        .link-inner i{margin: 0 5px;}
+
