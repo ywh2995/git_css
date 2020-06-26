@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 디자인 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    <!-- 제이쿼리 추가 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 가장아래쪽에 개인 디자인을 추가 -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        @media (max-width: 767px) {
+            .sidebar{display: none;}
+        }
+
+        header {position: fixed; top: 0px; left: 0px; background-color: #fff;}
+        header h1 {font-size: 100px; text-align: center; font-weight: 900;}
+        header .banner {position: absolute; top: 10px; right: 10px; overflow: hidden; width: 215px; height: 40px;}
+        header .banner li {float: left; margin: 10px 20px;}
+        header .banner li a {color: #555; text-decoration: none;}
+        header nav {background-color: #444; height: 45px; overflow: hidden;}
+        header nav ul {text-align: center;}
+        header nav ul li {display: inline-block;}
+        header nav ul li a{
+        text-decoration: none;
+        float: left;
+        display: block;
+        padding: 0 20px;
+        margin: 0 10px;
+        height: 40px;
+        line-height: 45px;
+        color: #fff;
+        border-bottom: 1px solid #444;
+        transition: all 0.5s linear 0s;
+        }
+
+        header nav ul li a:hover{
+            text-decoration: none;
+            color: #fff;
+            border-bottom: 5px solid #fff;
+        }
+
+        .sidebar {position: fixed; top: 500px; right: 0px; width: 100px; z-index: 100;}
+        .sidebar ul {background-color: #444; text-align: center;}
+        .sidebar ul h3 {padding: 0; margin: 0; font-size: 12px; font-weight: 600;}
+        .sidebar ul li a {
+            display: block;
+            padding: 15px 0;
+            border-top: 1px solid #4d4d4d;
+            color: white;
+            font-size: 12px;
+            line-height: 2;
+            letter-spacing: -1px;
+            padding-bottom: 10px;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        .main img {width: 1200px; position: relative;}
+        .main .img-inner {position: absolute; top: 50px; right: 20px;}
+        .main .img-inner h2 {
+            font-size: 36px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .main .img-inner p {padding: 10px;}
+        .main div.main_text {position: absolute; top: 50px; right: 20px;}
+        .main p {
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .main h2 {
+            font-size: 36px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .main {
+            text-align: center;
+            margin: 170px auto 0 auto;
+            width: 1200px;
+            height: 750px;
+            position: relative;
+            z-index: 1px;
+        }
+
+        .contents{width: 960px; margin: 0 auto; text-align: center; z-index: 1;}
+        .contents .clearfix{overflow: hidden;}
+        .contents ul li{float: left; width: 220px; padding: 10px; position: relative;}
+        .contents ul li .product{width: 220px;}
+        .contents ul li h2{font-size: 14px; color: #555; margin-top: 10px;}
+        .contents ul li h3{font-size: 12px; color: #555; margin-top: 10px;}
+        .contents ul li .hover-content{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+        }
+        .contents ul li:hover .hover-content{
+            opacity: 1;
+        }
+        .contents ul li .hover-content a{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+        a{text-decoration: none; outline: 0;}
+        img{border: 0;}
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <div>
+                        <h1>Z A R A</h1>
+                        <ul class="banner">
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">REGISTER</a></li>
+                        </ul>
+                        <nav>
+                            <ul>
+                                <li><a href="#">WOMAN</a></li>
+                                <li><a href="#">TRF</a></li>
+                                <li><a href="#">MAN</a></li>
+                                <li><a href="#">KIDS</a></li>
+                                <li><a href="#">WOMAN</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="sidebar-inner">
+            <li>
+                <a href="#">
+                    <h3>전화문의</h3>
+                    <p>010-1234-5678</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>카카오톡</h3>
+                    <p>1:1 상담</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>오시는길</h3>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <section class="main">
+        <img src="img/main.jpg">
+        <div class="main_text">
+            <h2>Category Bannner</h2>
+            <p>Upload image and description</p>
+            <p>Upload image and description</p>
+        </div>
+    </section>
+    <section class="contents">
+        <ul class="clearfix">
+            <li>
+                <img src="img/1.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/2.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/3.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/4.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/5.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/6.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/7.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+            <li>
+                <img src="img/8.jpg" alt class="product">
+                <h2>Product with Variants</h2>
+                <h3>
+                    "★★★☆☆"
+                    <span class="red">2REVIEW(S)</span>
+                    <br>
+                    "$59.00"
+                </h3>
+                <div class="hover-content">
+                    <a href="#">Jaket</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
